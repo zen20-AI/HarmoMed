@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Results | Color Correction</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center py-12 min-h-screen">
+  <h1 class="text-4xl font-bold text-white mb-10 tracking-wide">🖼️ Processed Images</h1>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 w-11/12 max-w-7xl">
+    {% for img in images %}
+    <div class="bg-gray-950 rounded-2xl shadow-xl p-4 hover:scale-105 transition-transform border border-gray-700">
+      <img src="{{ url_for('static', filename='results/' + img) }}" class="rounded-xl max-w-full h-auto object-contain">
+    </div>
+    {% endfor %}
+  </div>
+
+  <a href="/" class="mt-12 inline-block py-3 px-8 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-lg font-semibold transition duration-300 shadow-md">Upload Another</a>
+</body>
+</html>

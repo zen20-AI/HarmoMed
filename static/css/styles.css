@@ -1,0 +1,4 @@
+img:hover {
+    transform: rotate(2deg) scale(1.02);
+    transition: 0.4s ease-in-out;
+}
